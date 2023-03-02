@@ -407,6 +407,7 @@ summary {
 
 .plus {
 	border: none;
+	background-color: transparent;
 	flex-grow: 1;
 	margin-top: 0;
 	text-align: right;
@@ -503,50 +504,56 @@ summary {
 }
 
 /*==========REVIEW===========*/
-
-.otz-stat {
-	font-family: 'Forum';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 36px;
-	line-height: 125%;
-	text-transform: uppercase;
-	color: #000000;
-	margin-left: 391px;
-	margin-top: 30px;
-	margin-bottom: 96px;
+.otz-flex {
+	display: flex;
+	gap: var(--gap);
 }
 
-.otz-item h3 {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 130%;
-	color: #000000;
+.otz-flex img {
+	cursor: pointer;
 }
 
-.otz-item p {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 130%;
-	color: #000000;
+.prev {
+	transform: rotate(180deg);
+	transform-origin: center;
+	cursor: pointer
 }
 
 .otz-item {
-	background: #DAC1BC;
+	background: var(--br_mid);
 	width: 30%;
 	padding: 30px;
 }
 
-.otz-flex {
-	display: flex;
-	gap: 23px;
+.otz-item h3 {
+	margin-bottom: var(--gap);
 }
 
 /*===========================*/
+
+.review-visible {
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.review-flex {
+	display: flex;
+	gap: 30px;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 1;
+
+}
+
+.r-item {
+	min-width: 35vw;
+	background: var(--br_mid);
+	width: 35vw;
+	padding: 30px;
+}
+
+/*=================================*/
 
 .txt-center {
 	text-align: center;
@@ -689,5 +696,11 @@ summary {
 	.burger {
 		display: block;
 		order: 1;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.otz-item {
+		width: 50%;
 	}
 }
